@@ -12,11 +12,13 @@ def collatz_loop(n):
         num_looping = num
         num_iteration_count = 0
         while num_looping != 1:
+            # Attemp 1
             if num_looping in checked_value:
-                #By not counting the potentially repetitve iteration, we can see the effect of using the checked list
-                #num_iteration_count += iteration_counts_set[checked_value.index(num_looping)]
+                # By not counting the potentially repetitve iteration, we can see the effect of using the checked list
+                # num_iteration_count += iteration_counts_set[checked_value.index(num_looping)]
                 break
-            if (num_looping % 2):
+            elif (num_looping % 2):
+                # Attemp 2
                 num_looping = (3 * num_looping + 1)//2
                 num_iteration_count += 2
                 '''
